@@ -7,7 +7,7 @@ Bu uygulama, **SharePoint 2010** üzerinde bulunan “**Belge Kitaplıklarını*
 Büyük ölçekli SharePoint projelerinde, ölçeklemesi yapılmamış veya yapılması unutulmuş liste/doküman *(Large List)* kütüphanelerinin gün geçtikçe büyümesi, altyapı değişikliğine gidilmesi ve **eski verilerin aktarımlarının istenmesi** nedeni ile geliştirilmiştir.
 
 ## Geliştirme
-Uygulama, **C#** dili ile geliştirilmiş ve uzak makineden kütüphanelere erişmesi amacı ile S**harePoint 2010 CSOM***(Clien Side Object Model)* kullanılmıştır. Kullanım kolaylığı, sadeliği ve performansı açısından beğenilerek kullanılan, “Micro ORM’lerin kralı” olarak tabir edebileceğimiz **Dapper.NET** SQL işlemleri için tercih edilmiş, **UnitOfWork tasarım kalıbı** ile desteklenmiştir.
+Uygulama, **C#** dili ile geliştirilmiş ve uzak makineden kütüphanelere erişmesi amacı ile **SharePoint 2010 CSOM***(Clien Side Object Model)* kullanılmıştır. Kullanım kolaylığı, sadeliği ve performansı açısından beğenilerek kullanılan, “Micro ORM’lerin kralı” olarak tabir edebileceğimiz **Dapper.NET** SQL işlemleri için tercih edilmiş, **UnitOfWork tasarım kalıbı** ile desteklenmiştir.
 
 ### Eksikler/Geliştirilmesi Devam Edilen:
 1. Belge kitaplıklarına ait **dokümanların**'ların *[.pdf, .docx, .xls vb..]* aktarımları. *(Bu adım, dokümanları farklı senaryoya tabi tutmak zorunda kalındığı için eklenmedi.)* 
