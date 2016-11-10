@@ -16,3 +16,6 @@ Uygulama, **C#** dili ile geliştirilmiş ve uzak makineden kütüphanelere eri�
 ## Sonuç
 Bu uygulama ile **5 milyon satırlık veri** aktarımı tamamlanmış, **yaklaşık 3.5/4TB’lık doküman verisi** harici diske yazılmıştır.
 
+## Önizleme
+![SharePoint 2010 Belge Kitaplık Verilerini Harici MSSQL Veritabanına Aktarma Aracı](https://raw.githubusercontent.com/tahaipek/SharePoint2010ExportToExternalDb/master/Preview.gif)
+
