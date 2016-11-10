@@ -16,6 +16,45 @@ Uygulama, **C#** dili ile geliştirilmiş ve uzak makineden kütüphanelere eri�
 ## Sonuç
 Bu uygulama ile **5 milyon satırlık veri** aktarımı tamamlanmış, **yaklaşık 3.5/4TB’lık doküman verisi** harici diske yazılmıştır.
 
+## Kullanım
+Kök dizinde yer alan **DB** klasörü altındaki veritabanı yedeği veya script'i ile veritabanınızı oluşturun. Sonrasında "**SpAktarim**" ve "**SpAktarim.Test**" projeleri içerisinde yer alan **App.config** dosyalarındaki bağlantı kodunuzu düzenleyin.
+
+```
+<connectionStrings>
+	<add name="LocalDb" connectionString="Server=.;Database=SpAktarim;User Id=sa;Password=123456;" providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+
+**SpAktarim.Settings.cs** sınıf dosyası içerisinde yer alan **SharePoint** sunucusuna ait bilgileri güncelleyin.
+
+```
+	public static string ServerIpAddress => "http://10.1.1.1";
+	public static string ServerDomain => "SP";
+	public static string ServerUserName => "spadmin";
+	public static string ServerPassword => "Passw0rd";
+	public static string GetFullUserName => "${ServerDomain}\\$(ServerUserName)";
+```
+
+**List<string>** tipindeki **RootFolders** static değişkenine ait verileri, yalnızca aktarılmasını istediğiniz **"Belge Kitaplıkları"**'nın adını yazarak güncelleyin.
+
+```
+    /// <summary>
+    /// Aktarılması beklenen kök dizinler. Bu klasör dışındakiler aktarılmayacak.
+    /// </summary>
+    public static List<string> RootFolders = new List<string>
+    {
+        "Document Library01",
+        "Document Library02",
+        "Document Library03",
+        "Document Library04",
+        "Document Library05",
+        "Document Library06",
+    };
+```
+
+## Test
+Solution içerisinde Unit Test oluşturulmuştur. "**SpAktarim.Test**" projesinde yer **SharePoint** ve **SQL** test sınıflarını kullanarak bağlantıları test edebilir veya kendi metodlarınızı burada yazarak hızlıca test edebilirsiniz.
+
 ## Önizleme
 ![SharePoint 2010 Belge Kitaplık Verilerini Harici MSSQL Veritabanına Aktarma Aracı](https://raw.githubusercontent.com/tahaipek/SharePoint2010ExportToExternalDb/master/Preview.gif)
 
