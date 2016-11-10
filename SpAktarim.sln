@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpAktarim", "SpAktarim\SpAktarim.csproj", "{3DFA3C6A-38B7-47EA-A1F8-4ABE83F4B19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpAktarim.Data", "SpAktarim.Data\SpAktarim.Data.csproj", "{604BD0D8-2CC5-41C9-9218-A92667DB9F04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpAktarim.Bll", "SpAktarim.Bll\SpAktarim.Bll.csproj", "{5301DC16-BDA4-4415-BE62-7E9F1A175BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpAktarim.Test", "SpAktarim.Test\SpAktarim.Test.csproj", "{E5FC45BB-5780-4244-8EC2-38A619F7B693}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{4A746DBC-E801-46C4-82DF-7F07727A8774}"
+	ProjectSection(SolutionItems) = preProject
+		DB\DbScripts.sql = DB\DbScripts.sql
+		DB\SpAktarim.bak = DB\SpAktarim.bak
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DFA3C6A-38B7-47EA-A1F8-4ABE83F4B19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFA3C6A-38B7-47EA-A1F8-4ABE83F4B19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFA3C6A-38B7-47EA-A1F8-4ABE83F4B19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFA3C6A-38B7-47EA-A1F8-4ABE83F4B19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604BD0D8-2CC5-41C9-9218-A92667DB9F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604BD0D8-2CC5-41C9-9218-A92667DB9F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604BD0D8-2CC5-41C9-9218-A92667DB9F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604BD0D8-2CC5-41C9-9218-A92667DB9F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5301DC16-BDA4-4415-BE62-7E9F1A175BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5301DC16-BDA4-4415-BE62-7E9F1A175BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5301DC16-BDA4-4415-BE62-7E9F1A175BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5301DC16-BDA4-4415-BE62-7E9F1A175BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FC45BB-5780-4244-8EC2-38A619F7B693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FC45BB-5780-4244-8EC2-38A619F7B693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FC45BB-5780-4244-8EC2-38A619F7B693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FC45BB-5780-4244-8EC2-38A619F7B693}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
