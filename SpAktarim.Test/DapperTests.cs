@@ -19,22 +19,23 @@ namespace SpAktarim.Test
             [TestMethod]
             public void AddSite()
             {
-
-                var site = new Ent::Site()
+                using (var uow = new UnitOfWork(Settings.MsSql.ConnectionString))
                 {
-                    Title = "Test",
-                    Url = "http://10.1.1.1/"
-                };
-                uow.SiteRepository.Add(site);
-                uow.Commit();
-                Debug.WriteLine(site.ID.ToString());
+                    var site = new Ent::Site()
+                    {
+                        Title = "Test",
+                        Url = "http://10.1.1.1/"
+                    };
+                    uow.SiteRepository.Add(site);
+                    uow.Commit();
+                    Debug.WriteLine(site.ID.ToString());
 
-                var allSiteList = uow.SiteRepository.All();
-                foreach (var s in allSiteList)
-                {
-                    Debug.WriteLine(s.Title);
+                    var allSiteList = uow.SiteRepository.All();
+                    foreach (var s in allSiteList)
+                    {
+                        Debug.WriteLine(s.Title);
+                    }
                 }
-
             }
 
         }

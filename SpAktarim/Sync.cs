@@ -32,8 +32,7 @@ namespace SpAktarim
             }
             finally
             {
-                _sp?.ClientContext.Dispose();
-                _unitOfWork.Dispose();
+                DisposeObject();
 
                 ConsoleHelper.ShowMessage("SharePoint DB'ye hiyerarşik bir biçimde aktarımı tamamlandı...", ConsoleColor.Green);
 
@@ -42,6 +41,8 @@ namespace SpAktarim
 
         private void Initialize()
         {
+            DisposeObject();
+
             _unitOfWork = new UnitOfWork(Settings.MsSql.ConnectionString);
             _sp = new SpBase(new SpCredential
             {
@@ -50,6 +51,12 @@ namespace SpAktarim
                 UserName = Settings.SharePoint.ServerUserName,
                 Password = Settings.SharePoint.ServerPassword
             });
+        }
+
+        private void DisposeObject()
+        {
+            _sp?.Dispose();
+            _unitOfWork?.Dispose();
         }
 
         private void SyncWeb()

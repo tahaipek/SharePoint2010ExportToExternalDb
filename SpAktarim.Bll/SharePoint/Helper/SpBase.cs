@@ -47,7 +47,16 @@ namespace SpAktarim.Bll.SharePoint.Helper
             SpFolder = new SpFolder(this);
             SpFile = new SpFile(this);
         }
-        
+
+        public void Dispose()
+        {
+            SpWeb = null;
+            SpList = null;
+            SpFolder = null;
+            SpFile = null;
+            ClientContext?.Dispose();
+            GC.SuppressFinalize(this);
+        }
 
     }
 }
